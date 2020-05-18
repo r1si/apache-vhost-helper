@@ -1,0 +1,16 @@
+{
+  "name": "r1si/apache-vhost-helper",
+  "description": "A PHP library used to generate and getter information about Apache Vhost",
+  "keywords": [
+    "apache",
+    "vhost",
+    "virtualhost",
+    "apache config"
+  ],
+  "license": "GNUv3",
+  "autoload": {
+    "psr-4": {
+      "Apache\\VhostHelper\\": "src/"
+    }
+  }
+}
