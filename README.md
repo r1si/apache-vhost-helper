@@ -13,7 +13,7 @@ Inspired by [apache-vhost-processor](https://github.com/tetreum/apache-vhost-pro
 
 <a name="to_do"/>  
 
-##TO-DO
+## TO-DO
 - [ ] Make Read mode (read from existing apache config, and manipolate it) 
 - [ ] Write full documentation
 - [ ] Convert usage with no class
