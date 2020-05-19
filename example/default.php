@@ -92,8 +92,6 @@ $site_1->addDirective("CustomLog", "/var/www/sitobellissimo.com/logs/access.log 
 
 
 $apache_config_2->addVirtualHost($site_1);
-$apache_config_2->addVirtualHost($site_2);
-$apache_config_2->addVirtualHost($site_3);
 
 echo "<b>Short nested method</b>";
 echo "<pre>";
