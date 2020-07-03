@@ -53,6 +53,21 @@ class VirtualHost
         return $this;
     }
 
+    public function enablePHP($php_socket_url)
+    {
+        $php_directive = new AnObj(array(
+            "toString" => function () use ($php_socket_url) {
+                $content = self::INDENTATION_SPACES . '<FilesMatch ".+\.ph(ar|p|tml)$">' . PHP_EOL;
+                $content .= self::INDENTATION_SPACES_DOUBLE . 'SetHandler "' . $php_socket_url . '"' . PHP_EOL;
+                $content .= self::INDENTATION_SPACES . '</FilesMatch>' . PHP_EOL;
+                return $content;
+            }
+        ));
+
+        $this->classes_content[] = $php_directive;
+        return $this;
+    }
+
 
     public function redirect($type, $from, $to)
     {

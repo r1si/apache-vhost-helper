@@ -22,6 +22,8 @@ $apache_config
                     ->addDirective("Require", "all granted")
             )
             ->addBreak()
+            ->enablePHP("proxy:unix:/run/php/php7.0-fpm.sock|fcgi://localhost")
+            ->addBreak()
             ->enableSSL(
                 "/path/to/sitobellissimo_com.crt",
                 "/path/to/sitobellissimo_com.key",
