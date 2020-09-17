@@ -31,8 +31,8 @@ class Directory
                 $content .= self::INDENTATION_SPACES_TRIPE . "RewriteEngine On" . PHP_EOL;
                 $content .= self::INDENTATION_SPACES_TRIPE . "RewriteBase /" . PHP_EOL;
                 $content .= self::INDENTATION_SPACES_TRIPE . 'RewriteCond %{HTTP_HOST} ^' . $domain . '$' . PHP_EOL;
-                $content .= self::INDENTATION_SPACES_TRIPE . "%{REQUEST_FILENAME} !-f" . PHP_EOL;
-                $content .= self::INDENTATION_SPACES_TRIPE . '^(.*)$ ' . $destination . '/$1' . PHP_EOL;
+                $content .= self::INDENTATION_SPACES_TRIPE . "RewriteCond %{REQUEST_FILENAME} !-f" . PHP_EOL;
+                $content .= self::INDENTATION_SPACES_TRIPE . 'RewriteRule ^(.*)$ ' . $destination . '/$1' . PHP_EOL;
                 $content .= self::INDENTATION_SPACES_DOUBLE . "</IfModule>" . PHP_EOL;
                 return $content;
             }
